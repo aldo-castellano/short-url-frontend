@@ -12,32 +12,44 @@ const Main = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const data = await postUrl(url);
 
-    setShortUrl(data.short);
-    setUrl("");
-    setValid(false);
+    if (validator.isURL(url)) {
+      const data = await postUrl(url);
+
+      setShortUrl(data.short);
+      setUrl("");
+    } else {
+      setValid(true);
+    }
   };
   const handleChange = (e) => {
     setUrl(e.target.value);
+    setValid(false);
   };
 
-  useEffect(() => {
+  const validatorUrl = () => {
     if (validator.isURL(url)) {
       setValid(true);
     } else {
       setValid(false);
     }
-  }, [url]);
+  };
 
   return (
     <div>
-      <h1>Esto es el main</h1>
-      <form onSubmit={handleSubmit}>
-        <input type="text" value={url} id="url" onChange={handleChange}></input>
-        <button disabled={valid ? false : true}>uuid</button>
-        {valid ? null : <p>url no valida</p>}
-      </form>
+      <h1>shorter web</h1>
+      <div className="input-shorted">
+        <form onSubmit={handleSubmit}>
+          <input
+            type="text"
+            value={url}
+            id="url"
+            onChange={handleChange}
+          ></input>
+          <button>uuid</button>
+          {!valid ? null : <p>url no valida</p>}
+        </form>
+      </div>
       {shortUrl ? (
         <a href={shortUrl} target="_blank">
           {shortUrl}

@@ -1,0 +1,36 @@
+body {
+  background: #efeeee;
+}
+h1 {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 36px;
+  line-height: 44px;
+  /* identical to box height */
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  color: #efeeee;
+
+  text-shadow: 8px 7px 8px rgba(0, 0, 0, 0.17),
+    -2px -2px 4px rgba(255, 255, 255, 0.96);
+}
+.input-shorted {
+  padding: 1rem;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: 20rem;
+  background: #efeeee;
+  box-shadow: inset -2px -2px 5px rgba(255, 255, 255, 0.93),
+    inset 2px 2px 5px rgba(186, 186, 186, 0.93);
+  border-radius: 11px;
+  input {
+    background: #fbfafa;
+    border: none;
+    height: 30px;
+    box-shadow: inset -2px -2px 5px rgba(255, 255, 255, 0.93),
+      inset 2px 2px 5px rgba(186, 186, 186, 0.93);
+    border-radius: 11px;
+  }
+}
