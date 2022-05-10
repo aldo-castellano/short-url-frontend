@@ -1,9 +1,10 @@
 import axios from "axios";
-import validator from "validator";
-const shortid = require("shortid");
-const managerUrl = async (path) => {
-  const originalWeb = await axios.get(`http://localhost:4000/api/webs/${path}`);
 
+const managerUrl = async (path) => {
+  const originalWeb = await axios.get(
+    `${process.env.REACT_APP_API_URL2}api/webs/${path}`,
+  );
+  console.log(originalWeb);
   return (window.location.href = originalWeb.data);
 };
 export default managerUrl;

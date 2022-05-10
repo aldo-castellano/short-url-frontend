@@ -1,0 +1,19 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  background: #eef0f5;
+  font-family: "KoHo";
+}
+
+.button {
+  background: linear-gradient(134.17deg, #eef0f5 4.98%, #e6e9ef 94.88%);
+  box-shadow: $neomophist-outside;
+  text-decoration: none;
+  border: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 26px;
+  color: #ffbb00;
+}

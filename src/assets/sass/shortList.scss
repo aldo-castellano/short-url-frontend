@@ -1,0 +1,96 @@
+.your-shorter {
+  background: linear-gradient(134.17deg, #eef0f5 4.98%, #e6e9ef 94.88%);
+  box-shadow: $neomophist-outside;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+  .your-shorter-tittle h2 {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 31px;
+    text-transform: uppercase;
+    margin: 0;
+    color: #ffc700;
+  }
+}
+.item-short {
+  box-shadow: $neomophist-outside;
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  width: 100%;
+  .copy-ligth {
+    display: block;
+    align-self: flex-end;
+
+    border-radius: 50%;
+
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(44.73deg, #eef1f5 11.32%, #e6e9ef 92.96%);
+    box-shadow: inset -4px -4px 9px rgba(255, 255, 255, 0.7),
+      inset 4px 4px 5px rgba(166, 180, 200, 0.7);
+    border-radius: 40px;
+    transform: rotate(-90deg);
+  }
+  .copy-on {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 25%;
+      top: 25%;
+      width: 10px;
+      text-align: center;
+      height: 10px;
+      border-radius: 50%;
+      background-color: #2fff2b;
+      box-shadow: 0px 0px 10px rgba(47, 255, 43, 0.82);
+    }
+  }
+  .copy-off {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 25%;
+      top: 25%;
+      width: 10px;
+      text-align: center;
+      height: 10px;
+      background: linear-gradient(44.73deg, #eef1f5 11.32%, #e6e9ef 92.96%);
+      box-shadow: inset -4px -4px 9px rgba(255, 255, 255, 0.7),
+        inset 4px 4px 5px rgba(166, 180, 200, 0.7);
+      border-radius: 40px;
+      transform: rotate(-90deg);
+    }
+  }
+  .item-url {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    max-width: 50%;
+
+    p {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: Ellipsis;
+      margin: 0;
+      font-size: 16px;
+    }
+    a {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: Ellipsis;
+      margin: 0;
+    }
+  }
+}

@@ -1,11 +1,15 @@
 import axios from "axios";
-const shortid = require("shortid");
+
 const postUrl = async (path) => {
   let originalWeb;
+
   try {
-    originalWeb = await axios.post(`//localhost:4000/api/webs`, {
-      original_url: path,
-    });
+    originalWeb = await axios.post(
+      `${process.env.REACT_APP_API_URL2}api/webs`,
+      {
+        original_url: path,
+      },
+    );
   } catch (error) {
     return error;
   }
