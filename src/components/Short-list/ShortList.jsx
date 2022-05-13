@@ -19,7 +19,7 @@ const ShortList = ({ url }) => {
           <div className="item-url">
             <p>{url.original}</p>
 
-            <a target="_blank" href={url.short}>
+            <a target="_blank" rel="noreferrer" href={url.short}>
               {url.short}
             </a>
           </div>

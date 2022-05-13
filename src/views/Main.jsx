@@ -1,16 +1,14 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import postUrl from "../helper/postUrl";
 import validator from "validator";
-import managerUrl from "../helper/managerUrl";
-import ShortList from "../components/Short-list/ShortList";
 
-const shortid = require("shortid");
+import ShortList from "../components/Short-list/ShortList";
 
 const Main = () => {
   const [url, setUrl] = useState("");
   const [valid, setValid] = useState(false);
   const [shortUrl, setShortUrl] = useState();
-  const [copy, setCopy] = useState(false);
+  const [setCopy] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -49,7 +47,9 @@ const Main = () => {
         </div>
       </div>
 
-      {shortUrl ? <ShortList url={shortUrl} copy={setCopy}></ShortList> : null}
+      {shortUrl?.short ? (
+        <ShortList url={shortUrl} copy={setCopy}></ShortList>
+      ) : null}
     </div>
   );
 };
