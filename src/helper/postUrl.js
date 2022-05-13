@@ -5,7 +5,7 @@ const postUrl = async (path) => {
 
   try {
     originalWeb = await axios.post(
-      `${process.env.REACT_APP_API_URL2}api/webs`,
+      `${process.env.REACT_APP_API_URL_BACK}/api/webs`,
       {
         original_url: path,
       },
@@ -18,7 +18,7 @@ const postUrl = async (path) => {
 
   const data = {
     original: original_url,
-    short: `${process.env.REACT_APP_API_URL}${short_path_url}`,
+    short: `${process.env.REACT_APP_API_URL}/${short_path_url}`,
   };
 
   return data;
