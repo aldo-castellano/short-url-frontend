@@ -11,8 +11,34 @@
     font-size: 24px;
     line-height: 31px;
     text-transform: uppercase;
-    margin: 0;
-    color: #ffc700;
+    margin: 5px 0;
+    color: $colorText;
+  }
+}
+.container-item-short {
+  position: relative;
+  .copy-successful {
+    display: none;
+  }
+  .show-copy-successful {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    text-transform: uppercase;
+
+    p {
+      padding: 1rem;
+      color: #ffff;
+      font-size: 17px;
+      font-weight: 900;
+      margin: auto;
+      background-color: #424242;
+      border-radius: 11px;
+    }
   }
 }
 .item-short {
@@ -24,12 +50,11 @@
   align-items: center;
   height: 100px;
   width: 100%;
+
   .copy-ligth {
     display: block;
     align-self: flex-end;
-
     border-radius: 50%;
-
     width: 20px;
     height: 20px;
     background: linear-gradient(44.73deg, #eef1f5 11.32%, #e6e9ef 92.96%);
@@ -94,6 +119,16 @@
       overflow: hidden;
       text-overflow: Ellipsis;
       margin: 0;
+    }
+  }
+  .button-copy {
+    height: 40px;
+    width: 90px;
+    border-radius: 15px;
+    @media (min-width: 450px) {
+      height: 50px;
+      width: 100px;
+      border-radius: 20px;
     }
   }
 }

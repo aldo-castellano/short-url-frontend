@@ -13,7 +13,7 @@
   font-weight: 700;
   font-size: 36px;
   line-height: 47px;
-  color: #ffbb00;
+  color: $colorText;
   text-transform: uppercase;
   text-align: center;
 }
@@ -35,6 +35,8 @@
       inset 5px 5px 10px rgba(166, 180, 200, 0.75);
     border-radius: 40px;
     border: none;
+    transform-origin: top left;
+    transform: scale(1);
   }
 }
 
@@ -46,10 +48,4 @@
 .error-input {
   color: red;
   text-transform: uppercase;
-}
-
-.button-copy {
-  height: 50px;
-  width: 100px;
-  border-radius: 20px;
 }

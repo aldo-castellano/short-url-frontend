@@ -6,9 +6,8 @@ import ShortList from "../components/Short-list/ShortList";
 
 const Main = () => {
   const [url, setUrl] = useState("");
-  const [valid, setValid] = useState(false);
+  const [valid, setValid] = useState(true);
   const [shortUrl, setShortUrl] = useState();
-  const [setCopy] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -19,38 +18,39 @@ const Main = () => {
       setShortUrl(data);
       setUrl("");
     } else {
-      setValid(true);
+      setValid(false);
     }
   };
   const handleChange = (e) => {
     setUrl(e.target.value);
-    setValid(false);
+    setValid(true);
   };
 
   return (
-    <div className="container">
-      <div>
-        <h1 className="logo">shortener url</h1>
+    <>
+      <div className="container">
         <div>
-          <form className="form-shorter" onSubmit={handleSubmit}>
-            <input
-              type="text"
-              value={url}
-              placeholder="Escribe tu URL aqui"
-              id="url"
-              className="input-shorter"
-              onChange={handleChange}
-            ></input>
-            <button className=" button button-shorter">cut off</button>
-            {!valid ? null : <p className="error-input">url no valida</p>}
-          </form>
-        </div>
-      </div>
+          <h1 className="logo">shortener url</h1>
 
-      {shortUrl?.short ? (
-        <ShortList url={shortUrl} copy={setCopy}></ShortList>
-      ) : null}
-    </div>
+          <div>
+            <form className="form-shorter" onSubmit={handleSubmit}>
+              <input
+                type="text"
+                value={url}
+                placeholder="Escribe tu URL aqui"
+                id="url"
+                className="input-shorter"
+                onChange={handleChange}
+              ></input>
+              <button className=" button button-shorter">cut off</button>
+              {!valid ? <p className="error-input">url no valida</p> : null}
+            </form>
+          </div>
+        </div>
+
+        {shortUrl ? <ShortList url={shortUrl}></ShortList> : null}
+      </div>
+    </>
   );
 };
 
