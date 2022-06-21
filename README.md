@@ -1,7 +1,9 @@
-# Url Shortener
-
+<h1 align="center">Url Shortener</h1> 
 
 Developed and designed by [Aldo Castellano](https://www.linkedin.com/in/aldo-castellano/ "Aldo Castellano")
+
+
+
 
 <br>
 
