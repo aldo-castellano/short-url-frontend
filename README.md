@@ -7,7 +7,7 @@ Developed and designed by [Aldo Castellano](https://www.linkedin.com/in/aldo-cas
 
 ## ABOUT THE PROJECT 🖐️
 <br>
-URL Shortener is a website whose main function is to shorten long URLs. You can also manage the number of times they enter the shortened URL or if you prefer you can delete that URL.
+URL Shortener is a responsive website whose main function is to shorten long URLs. You can also manage the number of times they enter the shortened URL or if you prefer you can delete that URL.
 
 <br>
 
@@ -38,8 +38,8 @@ Before starting create an `.env` file in the root of the project.
 Inside the `.env` file we will write the environment variables.
 
 ```
-REACT_APP_URL=http://localhost:3000 //Url Domain
-REACT_APP_API_URL=http://localhost:80 // Url API
+REACT_APP_URL=http://localhost:3000 //The url domain
+REACT_APP_API_URL=http://localhost:80 //The url API
 ```
 
 <br>
