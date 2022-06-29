@@ -4,11 +4,14 @@
 body {
   background: #eef0f5;
   font-family: "KoHo";
+  margin: 0;
 }
 
 .button {
   background: linear-gradient(134.17deg, #eef0f5 4.98%, #e6e9ef 94.88%);
   box-shadow: $neomophist-outside;
+  background: linear-gradient(220.6deg, #eef0f5 8.29%, #e6e9ef 84.92%);
+  border-radius: 40px;
   text-decoration: none;
   border: none;
   text-transform: uppercase;

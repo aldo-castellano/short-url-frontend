@@ -3,22 +3,29 @@
   flex-direction: column;
   gap: 4rem;
   margin: 0 auto;
-  width: 340px;
+  width: 90%;
   @media (min-width: 450px) {
-    width: 550px;
+    width: 60%;
+  }
+  @media (min-width: 1500px) {
+    width: 40%;
   }
 }
 .logo {
   font-style: normal;
   font-weight: 700;
-  font-size: 36px;
+  font-size: 30px;
   line-height: 47px;
   color: $colorText;
   text-transform: uppercase;
   text-align: center;
+  @media (min-width: 450px) {
+    font-size: 36px;
+  }
 }
 
 .form-shorter {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -46,6 +53,8 @@
   padding: 1rem;
 }
 .error-input {
+  position: absolute;
+  bottom: -60px;
   color: red;
   text-transform: uppercase;
 }

@@ -1,0 +1,24 @@
+.transitions-enter {
+  opacity: 0;
+}
+.transitions-enter-active {
+  opacity: 1;
+
+  transition: all 600ms;
+}
+.transitions-exit {
+  opacity: 1;
+}
+.transitions-exit-active {
+  opacity: 0;
+
+  transition: all 600ms;
+}
+.transitions-appear {
+  opacity: 0;
+}
+.transitions-appear-active {
+  opacity: 1;
+
+  transition: all 600ms;
+}

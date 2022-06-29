@@ -1,21 +1,27 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Main from "./views/Main";
-import Error from "./views/Error";
-import managerUrl from "./helper/managerUrl";
+import Main from "./routes/Main";
+import Header from "./components/Header/Header";
+import Login from "./routes/Login";
+import Error from "./routes/Error";
 import shortid from "shortid";
-const pathName = window.location.pathname;
+import Singin from "./routes/Singin";
+import { AuthProvider } from "./context/AuthProvider";
+
 const App = () => {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Main />} />
-        {shortid.isValid(pathName.slice(1)) ? (
-          managerUrl(pathName.slice(1))
-        ) : (
-          <Route path="/*" element={<Error />} />
-        )}
-      </Routes>
-    </BrowserRouter>
+    <>
+      <BrowserRouter>
+        <AuthProvider>
+          <Header />
+          <Routes>
+            <Route path="/" element={<Main />} />
+            <Route exac path="/singin" element={<Singin />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/*" element={<Error />} />
+          </Routes>
+        </AuthProvider>
+      </BrowserRouter>
+    </>
   );
 };
 
